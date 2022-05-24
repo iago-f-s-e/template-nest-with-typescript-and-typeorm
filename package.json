@@ -16,7 +16,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",  
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "typecheck": "yarn tsc --noEmit",
     "prepare:husky": "husky install",
     "make:env": "chmod +x ./infra/make-env.sh && bash make.sh",
@@ -33,7 +33,6 @@
   "dependencies": {
     "@nestjs/common": "^8.4.5",
     "@nestjs/core": "^8.4.5",
-    "@nestjs/jwt": "^8.0.1",
     "@nestjs/platform-express": "^8.4.5",
     "@nestjs/typeorm": "^8.0.4",
     "class-transformer": "^0.5.1",
