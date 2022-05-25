@@ -16,14 +16,14 @@ if [ "$results" == "y" ] || [ "$results" == "Y" ]
     echo "### Database config ###" >> .env
     echo "DB_CONNECTION_NAME=app" >> .env
     echo "DB_HOST=localhost" >> .env
-    echo "DB_PORT=5432" >> .env
-    echo "DB_NAME=root" >> .env
-    echo "DB_USER=root" >> .env
-    echo "DB_PASS=root" >> .env
+    echo "DB_PORT=9999" >> .env
+    echo "DB_NAME=db_name" >> .env
+    echo "DB_USER=db_user" >> .env
+    echo "DB_PASS=db_pass" >> .env
     echo >> .env
     echo "### Redis config ###" >> .env
     echo "REDIS_HOST=localhost" >> .env
-    echo "REDIS_PORT=27017" >> .env
+    echo "REDIS_PORT=6379" >> .env
     echo >> .env
     echo "### TypeORM config ###" >> .env
     echo "TRANSFORMER_KEY_SECURITY=secret" >> .env
@@ -76,17 +76,17 @@ else
   read -p 'Database Server host (localhost): ' INPUT
     [ -z "$INPUT" ] && echo "DB_HOST=localhost" >> .env || echo "DB_HOST=$INPUT" >> .env
 
-  read -p 'Database Server port (5432): ' INPUT
-    [ -z "$INPUT" ] && echo "DB_PORT=5432" >> .env || echo "DB_PORT=$INPUT" >> .env
+  read -p 'Database Server port (9999): ' INPUT
+    [ -z "$INPUT" ] && echo "DB_PORT=9999" >> .env || echo "DB_PORT=$INPUT" >> .env
 
-  read -p 'Database Server database (root): ' INPUT
-    [ -z "$INPUT" ] && echo "DB_NAME=root" >> .env || echo "DB_NAME=$INPUT" >> .env
+  read -p 'Database Server database (db_name): ' INPUT
+    [ -z "$INPUT" ] && echo "DB_NAME=db_name" >> .env || echo "DB_NAME=$INPUT" >> .env
 
-  read -p 'Database Server user (root): ' INPUT
-    [ -z "$INPUT" ] && echo "DB_USER=root" >> .env || echo "DB_USER=$INPUT" >> .env
+  read -p 'Database Server user (db_user): ' INPUT
+    [ -z "$INPUT" ] && echo "DB_USER=db_user" >> .env || echo "DB_USER=$INPUT" >> .env
 
-  read -sp 'Database Server password (root): ' INPUT
-    [ -z "$INPUT" ] && echo "DB_PASS=root" >> .env || echo "DB_PASS=$INPUT" >> .env
+  read -sp 'Database Server password (db_pass): ' INPUT
+    [ -z "$INPUT" ] && echo "DB_PASS=db_pass" >> .env || echo "DB_PASS=$INPUT" >> .env
 
   echo >> .env
   echo ""
